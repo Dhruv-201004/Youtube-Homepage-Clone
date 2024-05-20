@@ -1,0 +1,127 @@
+    a{
+      text-decoration: none;
+      color:inherit;
+      text-wrap: nowrap;
+    }
+    .thumbnail {
+      width: 300px;
+      /*Height also changes */
+      display: block;
+      /* height: 300px;
+        object-fit: contain; Scale the image to maintain aspect ratio.
+        object-position: left; Which part  of the image should be shown 
+        */
+    }
+
+    /* -block element-takes whole line in their container e.g <p> or <div>
+        -inline-block element- can fit side by side e.g<img>,<input>
+        -inline element-within a text e.g<u>,<strong>
+          To interchange btw them use css display property
+          */
+    /*.video-author,.video-stats{
+        display:inline-block
+      }
+       */
+    
+
+    .thumbnail {
+      width: 100%;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 14px;
+    }
+    /* To make website responsive i.e change with resizing window 
+    all contents adjust */
+
+    /* Code only works when  width is 600px */
+    @media (max-width:867px){
+      .video-grid{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media(min-width: 1125px){
+        .video-grid{
+          grid-template-columns:1fr 1fr 1fr 1fr ;
+        }
+      }
+    @media (min-width:868px) and (max-width:1124px) {
+      .video-grid{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+      }
+      @media (min-width:1126px) {
+        .video-titles{
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .video-grid{
+          font-size: 14px;
+        }
+      }
+    
+
+    /* Inheritance properties can be used for text elements . But Priority is Same*/
+ 
+
+    .video-title {
+      margin-top: 0px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+
+    .channel-picture {
+      display: inline-block;
+      width: 50px;
+      vertical-align: top;
+    }
+
+    .video-info {
+      display: inline-block;
+      width: 200px;
+    }
+
+    .profile-picture {
+      border-radius: 50px;
+      width: 36px;
+    }
+
+    .thumbnail-row {
+      margin-bottom: 8px;
+      position:relative;
+    }
+
+    .video-time{
+      position: absolute;
+      bottom: 8px;
+      right: 5px;
+      background-color: black;
+      border-radius: 2px;
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px;
+    }
+
+    .video-author,
+    .video-stats {
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+    }
+
+    .video-author {
+      margin-bottom: 4px;
+    }
+
+    .video-info-grid {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+    }
+
+    
+
+  
