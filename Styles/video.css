@@ -4,39 +4,20 @@
       text-wrap: nowrap;
     }
     .thumbnail {
-      width: 300px;
-      /*Height also changes */
-      display: block;
-      /* height: 300px;
-        object-fit: contain; Scale the image to maintain aspect ratio.
-        object-position: left; Which part  of the image should be shown 
-        */
-    }
-
-    /* -block element-takes whole line in their container e.g <p> or <div>
-        -inline-block element- can fit side by side e.g<img>,<input>
-        -inline element-within a text e.g<u>,<strong>
-          To interchange btw them use css display property
-          */
-    /*.video-author,.video-stats{
-        display:inline-block
-      }
-       */
-    
-
-    .thumbnail {
       width: 100%;
+      display: block;
     }
+
+    
     .video-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 16px;
       row-gap: 14px;
     }
-    /* To make website responsive i.e change with resizing window 
-    all contents adjust */
+   
 
-    /* Code only works when  width is 600px */
+
     @media (max-width:867px){
       .video-grid{
         grid-template-columns: 1fr 1fr;
@@ -63,8 +44,6 @@
       }
     
 
-    /* Inheritance properties can be used for text elements . But Priority is Same*/
- 
 
     .video-title {
       margin-top: 0px;
